@@ -1,0 +1,117 @@
+---
+title: "Manual PRIA Y SAA"
+format: html
+editor: visual
+---
+
+# Sistemas de Aprendizaje Automático
+
+## Introducción a estadística en R
+
+### Histogramas
+
+Para crear un histograma hay que instalar primero los paquetes ggplot2.
+
+```{r}
+#install.packages(("ggplot2"))
+#library(ggplot2)
+#ggplot(tabla, aes(x=Magia)) + geom_histogram(binwidth = 5)
+```
+
+Este fragmento de codigo nos mostrará un histograma de una estadistica de Magia. Dicha estadistica la sacamos de una tabla que hay que conectar previamente mediante este codigo:
+
+```{r}
+#tabla <- read.csv("HOLA.csv") #Guardar la tabla y el archivo en el mismo directorio
+#tabla
+```
+
+### Media y mediana
+
+Para calcular la media hacemos uso de la funcion mean() y para calcular la mediana hacemos uso de la funcion median().
+
+### Moda
+
+Para calcular la moda hacemos uso de la función "which.max()"
+
+### Varianza
+
+Para calcular la varianza hacemos uso de la función var()
+
+### Rango
+
+Para calcular el rango de un dato restamos el máximo valor menos el valor mínimo con las funciones max() y min().
+
+### Funciones pnorm, dnorm, qnorm, rnorm:
+
+#### - pnorm
+
+Se utiliza para calcular la probabilidad acumulada de una distribución normal estándar o una distribución normal con parámetros específicos. Esta función calcula la probabilidad de que una variable aleatoria normal sea menor o igual a un valor dado.
+
+```{r}
+pnorm(1.5)
+```
+
+#### - dnorm
+
+Se usa para calcular la densidad de probabilidad en una distribución normal en un punto específico o en un conjunto de puntos.
+
+```{r}
+dnorm(1)
+```
+
+#### - qnorm
+
+Se utiliza para calcular los cuantiles de una distribución normal.Te permite encontrar valores en la distribución normal correspondientes a ciertos percentiles.
+
+```{r}
+qnorm(0.95)
+
+```
+
+#### - rnorm
+
+Se utiliza para generar números aleatorios que siguen una distribución normal.
+
+```{r}
+rnorm(5, mean = 2, sd = 0.5)
+```
+
+# Programación de Inteligencia Artificial
+
+### Archivo Rscript
+
+Una vez instalado R, podemos ejecutar scripts desde el CMD de nuestro ordenador. Nos situamos en el directorio donde se encuentra el script guardado y con el comando "Rscript nombreArchivo.R" se ejecuta el script en nuestro cmd.
+
+### Vectores
+
+Para crear un vector de numeros del 1 al 50 es así:
+
+```{r}
+#vector1 <- 1:50
+#vector1 
+```
+
+Si queremos hacer un vector con incrementos de numeros tenemos que usar seq() y el by.
+
+Para generar un vector y queremos que se repitan una serie de numeros usaremos la funcion rep() indicando el numero de repeticiones que vas a hacer:
+
+```{r}
+#repeat_count <- rep(c(1,2,3,4,5), times = 3)
+#repeat_count
+```
+
+### Facet Wrap
+
+Cuando utilizas facet_wrap(\~ continent) en un gráfico de ggplot2, estás indicando que deseas crear paneles separados para cada nivel único de la variable continent. El símbolo "\~" se utiliza en ggplot2 para especificar la relación entre variables.
+
+### Expand Grid
+
+Expand.grid() es una función que se utiliza para generar un marco de datos que contiene todas las combinaciones posibles de los valores proporcionados. Es útil cuando se desea explorar todas las combinaciones de varios conjuntos de datos o variables.
+
+### Pull
+
+Pull() se utiliza para extraer una única columna de un marco de datos como un vector.
+
+### Cumsum
+
+Cumsum() en R se utiliza para calcular la suma acumulativa de elementos en un vector.
